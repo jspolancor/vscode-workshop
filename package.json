@@ -8,14 +8,14 @@
 		"vscode": "^1.37.1"
 	},
 	"activationEvents": [
-		"onCommand:extension.helloWorld"
+		"onCommand:extension.commander"
 	],
 	"main": "./extension.js",
 	"contributes": {
 		"commands": [
 			{
-				"command": "extension.helloWorld",
-				"title": "Hello World"
+				"command": "extension.commander",
+				"title": "Commander"
 			}
         ],
         "configuration": {

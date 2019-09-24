@@ -11,19 +11,40 @@ const vscode = require('vscode');
 function activate(context) {
 	// Use the console to output diagnostic information (console.log) and errors (console.error)
 	// This line of code will only be executed once when your extension is activated
-	console.log('Congratulations, your extension "helloworld-minimal-sample" is now active!');
+	console.log('Congratulations, your extension "commander" is now active!');
 
 	// The command has been defined in the package.json file
 	// Now provide the implementation of the command with  registerCommand
 	// The commandId parameter must match the command field in package.json
-	let disposable = vscode.commands.registerCommand('extension.helloWorld', () => {
+	let callCommander = vscode.commands.registerCommand('extension.commander', () => {
 		// The code you place here will be executed every time your command is executed
 
 		// Display a message box to the user
-		vscode.window.showInformationMessage('Hello World!');
+        vscode.window.showInformationMessage('Hello Commander!');
+        
+        // Get the saved commands
+        const currentCommands = vscode.workspace.getConfiguration('').get('commander.commands');
+        
+        const validCommands = currentCommands.filter(command => command.label && command.command);
+
+        const quickPick = vscode.window.createQuickPick();
+        quickPick.items = validCommands;
+        
+        quickPick.onDidChangeSelection(selection => {
+            quickPick.dispose();
+            vscode.window.showInformationMessage(selection[0].label);
+
+            // Execute command
+
+            vscode.commands.executeCommand('workbench.action.terminal.new');
+            vscode.commands.executeCommand('workbench.action.terminal.runSelectedText', selection[0].command);
+
+        });
+        quickPick.onDidHide(() => quickPick.dispose());
+		quickPick.show();
 	});
 
-	context.subscriptions.push(disposable);
+	context.subscriptions.push(callCommander);
 }
 
 // this method is called when your extension is deactivated
