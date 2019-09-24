@@ -2,11 +2,27 @@
 
 ## Intro
 
+VsCode is great, but you could make it greater
+
 ## You can
 
-## You can't
+. Change the look of VS Code with a color or icon theme - Theming
+. Add custom components & views in the UI - Extending the Workbench
+. Create a Webview to display a custom webpage built with HTML/CSS/JS
+. Support a new programming language - Language Extensions Overview
 
-## Development
+### What you usually would do
+
+. Register commands
+. Display notifications
+. Collect user input
+. Create code snippets
+. Connect to external servers
+
+## What we will create
+
+Develop an extension that will execute saved commands on the vscode integrated terminal
+
+## Developing the extension
 
 ## Publishing
-
