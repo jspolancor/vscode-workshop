@@ -29,5 +29,13 @@ Develop an extension that will execute saved commands on the vscode integrated t
 
 2. Open the official VsCode [extension API docs](https://code.visualstudio.com/api)
 
+3. Inside the package.json file you should register how your extension contributes to vscode.
+in the contributes key you register the commands and configuration for the extension
 
+4. Go to the extension.js file and add the functionality to the commands
 
+## Publishing
+
+Publishing is an easy but tedious proccess.
+
+Just follow the [official instructions](https://code.visualstudio.com/api/working-with-extensions/publishing-extension) and be patient.
