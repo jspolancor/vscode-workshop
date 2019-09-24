@@ -39,3 +39,7 @@ in the contributes key you register the commands and configuration for the exten
 Publishing is an easy but tedious proccess.
 
 Just follow the [official instructions](https://code.visualstudio.com/api/working-with-extensions/publishing-extension) and be patient.
+
+
+
+This branch contains the final extension
