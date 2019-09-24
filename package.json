@@ -1,11 +1,11 @@
 {
-	"name": "helloworld-minimal-sample",
-	"description": "Minimal HelloWorld example for VS Code",
+	"name": "commander",
+	"description": "Trigger saved command on the integrated terminal",
 	"version": "0.0.1",
 	"publisher": "vscode-samples",
-	"repository": "https://github.com/Microsoft/vscode-extension-samples/helloworld-minimal-sample",
+	"repository": "https://github.com/jspolancor/vscode-workshop",
 	"engines": {
-		"vscode": "^1.32.0"
+		"vscode": "^1.37.1"
 	},
 	"activationEvents": [
 		"onCommand:extension.helloWorld"
@@ -17,7 +17,18 @@
 				"command": "extension.helloWorld",
 				"title": "Hello World"
 			}
-		]
+        ],
+        "configuration": {
+            "type": "object",
+            "title": "Commander config",
+            "properties": {
+                "commander.commands": {
+                    "type": "array",
+                    "default": [],
+                    "description": "Array of objects with the commands and its aliases"
+                }
+            }
+        }
 	},
 	"scripts": {},
 	"devDependencies": {

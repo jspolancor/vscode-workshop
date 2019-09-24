@@ -25,7 +25,9 @@ Develop an extension that will execute saved commands on the vscode integrated t
 
 ## Developing the extension
 
-The easiest way to start developing vscode extensions is to clone the [hello world example](https://github.com/microsoft/vscode-extension-samples/tree/master/helloworld-minimal-sample)
+1. The easiest way to start developing vscode extensions is to clone the [hello world example](https://github.com/microsoft/vscode-extension-samples/tree/master/helloworld-minimal-sample)
+
+2. Open the official VsCode [extension API docs](https://code.visualstudio.com/api)
 
 
 
