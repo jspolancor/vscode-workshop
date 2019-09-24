@@ -1,9 +1,13 @@
 {
 	"name": "commander",
-	"description": "Trigger saved command on the integrated terminal",
+    "description": "Trigger saved command on the integrated terminal",
+    "icon": "logo.png",
 	"version": "0.0.1",
 	"publisher": "vscode-samples",
-	"repository": "https://github.com/jspolancor/vscode-workshop",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/jspolancor/vscode-workshop"
+    },
 	"engines": {
 		"vscode": "^1.37.1"
 	},
